@@ -1,20 +1,4 @@
-const without = (source, itemsToRemove) => {
-  const final = [];
-  for (let i = 0; i < source.length; i++) {
-    let equal = true;
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] === itemsToRemove[j]) {
-        equal = false;
-      }
-    }
-    if ((equal = true)) {
-      final.push(source[i]);
-    }
-  }
-  return final;
-};
 
-// assertArraysEqual compares arrays - used to tests
 const assertArraysEqual = function (array1, array2) {
   let text;
   if (eqArrays(array1, array2)) {
@@ -40,5 +24,6 @@ const eqArrays = (array1, array2) => {
 };
 
 // TEST CODE
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3, 5], [1, 2, 3]); // => should FAIL
+assertArraysEqual([1, 3, 2], [1, 2, 3]); // => should FAIL
