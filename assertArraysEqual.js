@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (array1, array2) {
+const assertArraysEqual = function (array1, array2) {
   let text;
   if (eqArrays(array1, array2)) {
     text = "💚💚💚Assertion Passed";
@@ -24,6 +24,6 @@ const eqArrays = (array1, array2) => {
 };
 
 // TEST CODE
-assertEqual([1, 2, 3], [1, 2, 3]); // => should PASS
-assertEqual([1, 2, 3, 5], [1, 2, 3]); // => should FAIL
-assertEqual([1, 3, 2], [1, 2, 3]); // => should FAIL
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3, 5], [1, 2, 3]); // => should FAIL
+assertArraysEqual([1, 3, 2], [1, 2, 3]); // => should FAIL
