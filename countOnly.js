@@ -16,18 +16,8 @@ const countOnly = (allItems, itemsToCount) => {
   }
   return output;
 };
+module.exports=countOnly
 
-// TEST FUNCTION
-const assertEqual = function (actual, expected) {
-  let text;
-  if (actual === expected) {
-    text = "💚💚💚Assertion Passed: " + actual + " === " + expected;
-    console.log(text);
-  } else {
-    text = "🧡🧡🧡Assertion Failed: " + actual + " !== " + expected;
-    console.log(text);
-  }
-};
 
 // TEST CODE
 const firstNames = [
