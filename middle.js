@@ -1,5 +1,3 @@
-
-
 //actual function
 const middle = (array) => {
   let length = array.length;
